@@ -405,6 +405,7 @@ li {
   box-shadow: var(--card-shadow);
   transition: var(--transition);
   border: 1px solid var(--border);
+  cursor: pointer;
 }
 
 .feature-card:hover {
@@ -437,6 +438,7 @@ li {
   border: 1px solid var(--border);
   margin: 20px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 .tech-badge {
@@ -461,6 +463,7 @@ li {
   overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .theme-card:hover {
