@@ -2,27 +2,36 @@
    :root - CSS Variables
    Define reusable colors, shadows, and patterns
    ============================================= */
+
 :root {
-  --primary: #00a9e9; /* Main theme color */
-  --primary-dark: #0086ba; /* Darker shade of primary */
-  --secondary: #ec4899; /* Secondary theme color */
-  --secondary-dark: #d33687; /* Darker shade of secondary */
-  --dark: #1e293b; /* Main text and sidebar background */
-  --light: #f8fafc; /* Light color for text/background */
-  --gray: #94a3b8; /* Gray for muted text */
-  --border: #e2e8f0; /* Border color */
-  --card-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
-                 0 2px 4px -1px rgba(0,0,0,0.06); /* Card shadow */
-  --transition: all 0.3s ease; /* Smooth transition for hover/animation */
+  --primary: #00a9e9;
+  --primary-dark: #0086ba;
+  --secondary: #ec4899;
+  --secondary-dark: #d33687;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --gray: #94a3b8;
+  --border: #e2e8f0;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition: all 0.3s ease;
   --textile-pattern: linear-gradient(
-      45deg, #f8fafc 25%, transparent 25%, transparent 75%, #f8fafc 75%, #f8fafc
+      45deg,
+      #f8fafc 25%,
+      transparent 25%,
+      transparent 75%,
+      #f8fafc 75%,
+      #f8fafc
     ),
     linear-gradient(
-      45deg, #f8fafc 25%, transparent 25%, transparent 75%, #f8fafc 75%, #f8fafc
-    ); /* Background textile pattern */
-  --max-width: 1200px; /* Max content width */
+      45deg,
+      #f8fafc 25%,
+      transparent 25%,
+      transparent 75%,
+      #f8fafc 75%,
+      #f8fafc
+    );
 }
-
 /* =============================================
    Global Styles
    Reset margin/padding and set default font
@@ -30,7 +39,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Include padding/border in size */
+  box-sizing: border-box;
 }
 
 body {
@@ -41,23 +50,23 @@ body {
   background-image: var(--textile-pattern);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
-  display: flex; /* Sidebar + content layout */
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  display: flex;
+  overflow-x: hidden;
 }
-
 /* =============================================
    Typography (Responsive)
    Using clamp() to scale fonts dynamically
    ============================================= */
-h1, .header h2 {
+h1,
+.header h2 {
   font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
 }
-
-h2, .section h3 {
+h2,
+.section h3 {
   font-size: clamp(1.4rem, 1.5vw + 0.8rem, 2rem);
 }
-
-p, li {
+p,
+li {
   font-size: clamp(0.95rem, 0.8vw + 0.7rem, 1.1rem);
 }
 
@@ -66,18 +75,17 @@ p, li {
    Fixed vertical navigation menu
    ============================================= */
 .sidebar {
-  width: clamp(200px, 20vw, 280px); /* Dynamic width */
+  width: clamp(200px, 20vw, 280px);
   background: var(--dark);
   color: white;
   height: 100vh;
-  position: fixed; /* Always visible */
-  overflow-y: auto; /* Scroll if content exceeds height */
+  position: fixed;
+  overflow-y: auto;
   padding: 20px 0;
   transition: var(--transition);
   z-index: 100;
 }
 
-/* Logo section in sidebar */
 .logo {
   text-align: center;
   padding: 20px 0;
@@ -98,7 +106,6 @@ p, li {
   margin-top: 5px;
 }
 
-/* Badge style */
 .badge {
   background: var(--primary);
   padding: 3px 10px;
@@ -109,7 +116,6 @@ p, li {
   color: var(--light);
 }
 
-/* Navigation links */
 .nav-links {
   margin-top: 20px;
 }
@@ -127,7 +133,7 @@ p, li {
 }
 
 .nav-links li {
-  border-left: 3px solid transparent; /* Active indicator */
+  border-left: 3px solid transparent;
   transition: var(--transition);
 }
 
@@ -137,13 +143,14 @@ p, li {
 }
 
 .nav-links a {
-  display: flex;
-  align-items: center;
+  display: block;
   padding: 12px 25px;
   color: var(--light);
   text-decoration: none;
   font-size: 1rem;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a:hover {
@@ -161,14 +168,12 @@ p, li {
    ============================================= */
 .content {
   flex: 1;
-  margin-left: clamp(200px, 20vw, 280px); /* Account for sidebar width */
+  margin-left: clamp(200px, 20vw, 280px);
   padding: 40px;
-  max-width: var(--max-width);
-  width: 100%;
+  width: clamp(200px, 20vw, 280px);
   transition: margin-left 0.3s ease;
 }
 
-/* Header in content */
 .header {
   display: flex;
   justify-content: space-between;
@@ -179,17 +184,17 @@ p, li {
 }
 
 .header h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--dark);
   font-weight: 700;
 }
 
-/* Header actions (buttons, etc.) */
+/* Header actions wrapper */
 .header-actions {
   display: flex;
-  flex-wrap: wrap; /* Wrap on smaller screens */
+  flex-wrap: wrap; /* allow items to wrap on smaller screens */
   gap: 15px;
-  justify-content: flex-end; /* Right align on large screens */
+  justify-content: flex-end; /* align right on large screens */
 }
 
 /* =============================================
@@ -198,19 +203,20 @@ p, li {
 .btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* center content */
   padding: 10px 20px;
   border-radius: 6px;
   font-weight: 500;
   text-decoration: none;
   transition: var(--transition);
-  white-space: nowrap; /* Prevent text wrap */
+  white-space: nowrap; /* prevent text from breaking */
 }
 
 .btn-primary {
   background: var(--primary);
   color: white;
 }
+
 .btn-primary:hover {
   background: var(--primary-dark);
 }
@@ -219,6 +225,7 @@ p, li {
   background: var(--secondary);
   color: white;
 }
+
 .btn-secondary:hover {
   background: var(--secondary-dark);
 }
@@ -226,7 +233,6 @@ p, li {
 .btn i {
   margin-right: 8px;
 }
-
 /* =============================================
    Search Box
    ============================================= */
@@ -254,6 +260,7 @@ p, li {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .search-box button:hover {
   background: var(--primary-dark);
 }
@@ -286,7 +293,8 @@ p, li {
   color: #334155;
 }
 
-.section ul, .section ol {
+.section ul,
+.section ol {
   margin-left: 25px;
   margin-bottom: 20px;
 }
@@ -309,7 +317,6 @@ p, li {
   font-family: "Courier New", monospace;
 }
 
-/* Note & Warning boxes */
 .section .note {
   background: #e0f2fe;
   border-left: 4px solid var(--primary);
@@ -351,9 +358,160 @@ p, li {
   font-size: 1.2rem;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Table of Contents */
+.toc {
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.toc ul {
+  list-style: none;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+.toc a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.toc a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* =============================================
+   Features Grid 
+   ============================================= */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  border: 1px solid var(--border);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 169, 233, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.feature-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.screenshot {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tech-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+
+.theme-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.theme-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.theme-card:hover {
+  transform: translateY(-5px);
+}
+
+.theme-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.theme-card-content {
+  padding: 15px;
+  background: white;
+}
+
+.theme-card h4 {
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.color-swatch {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-primary {
+  background: var(--primary);
+}
+
+.color-secondary {
+  background: var(--secondary);
+}
+
+.color-dark {
+  background: var(--dark);
+}
+
+.color-light {
+  background: var(--light);
+}
 /* =============================================
    File Structure for Documentation
    ============================================= */
@@ -369,18 +527,25 @@ p, li {
 }
 
 .file-structure .folder {
-  color: #7f9cf5; /* Highlight folders */
+  color: #7f9cf5;
 }
 
 .file-structure .file {
-  color: #a0aec0; /* Files color */
+  color: #a0aec0;
   margin-left: 20px;
 }
 
-.file-structure .indent-1 { margin-left: 20px; }
-.file-structure .indent-2 { margin-left: 40px; }
-.file-structure .indent-3 { margin-left: 60px; }
+.file-structure .indent-1 {
+  margin-left: 20px;
+}
 
+.file-structure .indent-2 {
+  margin-left: 40px;
+}
+
+.file-structure .indent-3 {
+  margin-left: 60px;
+}
 /* =============================================
    Footer
    ============================================= */
