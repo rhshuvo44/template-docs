@@ -1,0 +1,394 @@
+/* =============================================
+   :root - CSS Variables
+   Define reusable colors, shadows, and patterns
+   ============================================= */
+:root {
+  --primary: #00a9e9; /* Main theme color */
+  --primary-dark: #0086ba; /* Darker shade of primary */
+  --secondary: #ec4899; /* Secondary theme color */
+  --secondary-dark: #d33687; /* Darker shade of secondary */
+  --dark: #1e293b; /* Main text and sidebar background */
+  --light: #f8fafc; /* Light color for text/background */
+  --gray: #94a3b8; /* Gray for muted text */
+  --border: #e2e8f0; /* Border color */
+  --card-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
+                 0 2px 4px -1px rgba(0,0,0,0.06); /* Card shadow */
+  --transition: all 0.3s ease; /* Smooth transition for hover/animation */
+  --textile-pattern: linear-gradient(
+      45deg, #f8fafc 25%, transparent 25%, transparent 75%, #f8fafc 75%, #f8fafc
+    ),
+    linear-gradient(
+      45deg, #f8fafc 25%, transparent 25%, transparent 75%, #f8fafc 75%, #f8fafc
+    ); /* Background textile pattern */
+  --max-width: 1200px; /* Max content width */
+}
+
+/* =============================================
+   Global Styles
+   Reset margin/padding and set default font
+   ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding/border in size */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #f1f5f9;
+  background-image: var(--textile-pattern);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  display: flex; /* Sidebar + content layout */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* =============================================
+   Typography (Responsive)
+   Using clamp() to scale fonts dynamically
+   ============================================= */
+h1, .header h2 {
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
+}
+
+h2, .section h3 {
+  font-size: clamp(1.4rem, 1.5vw + 0.8rem, 2rem);
+}
+
+p, li {
+  font-size: clamp(0.95rem, 0.8vw + 0.7rem, 1.1rem);
+}
+
+/* =============================================
+   Sidebar
+   Fixed vertical navigation menu
+   ============================================= */
+.sidebar {
+  width: clamp(200px, 20vw, 280px); /* Dynamic width */
+  background: var(--dark);
+  color: white;
+  height: 100vh;
+  position: fixed; /* Always visible */
+  overflow-y: auto; /* Scroll if content exceeds height */
+  padding: 20px 0;
+  transition: var(--transition);
+  z-index: 100;
+}
+
+/* Logo section in sidebar */
+.logo {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.logo span {
+  font-size: 0.9rem;
+  color: var(--gray);
+  display: block;
+  margin-top: 5px;
+}
+
+/* Badge style */
+.badge {
+  background: var(--primary);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: inline-block;
+  color: var(--light);
+}
+
+/* Navigation links */
+.nav-links {
+  margin-top: 20px;
+}
+
+.nav-links h3 {
+  padding: 15px 25px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray);
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links li {
+  border-left: 3px solid transparent; /* Active indicator */
+  transition: var(--transition);
+}
+
+.nav-links li.active {
+  border-left-color: var(--primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+  color: var(--light);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-links i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+/* =============================================
+   Main Content
+   ============================================= */
+.content {
+  flex: 1;
+  margin-left: clamp(200px, 20vw, 280px); /* Account for sidebar width */
+  padding: 40px;
+  max-width: var(--max-width);
+  width: 100%;
+  transition: margin-left 0.3s ease;
+}
+
+/* Header in content */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* Header actions (buttons, etc.) */
+.header-actions {
+  display: flex;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  gap: 15px;
+  justify-content: flex-end; /* Right align on large screens */
+}
+
+/* =============================================
+   Buttons
+   ============================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap; /* Prevent text wrap */
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: white;
+}
+.btn-secondary:hover {
+  background: var(--secondary-dark);
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+/* =============================================
+   Search Box
+   ============================================= */
+.search-box {
+  display: flex;
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  margin: 20px 0;
+}
+
+.search-box input {
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.search-box button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.search-box button:hover {
+  background: var(--primary-dark);
+}
+
+/* =============================================
+   Documentation Sections
+   ============================================= */
+.section {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+.section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.section h3 i {
+  margin-right: 10px;
+}
+
+.section p {
+  margin-bottom: 15px;
+  color: #334155;
+}
+
+.section ul, .section ol {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+.section li {
+  margin-bottom: 8px;
+}
+
+.section pre {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.section code {
+  font-family: "Courier New", monospace;
+}
+
+/* Note & Warning boxes */
+.section .note {
+  background: #e0f2fe;
+  border-left: 4px solid var(--primary);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.section .warning {
+  background: #fffbeb;
+  border-left: 4px solid #f59e0b;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.section .info-card {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* =============================================
+   Responsive Design
+   ============================================= */
+.mobile-menu-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* =============================================
+   File Structure for Documentation
+   ============================================= */
+.file-structure {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.file-structure .folder {
+  color: #7f9cf5; /* Highlight folders */
+}
+
+.file-structure .file {
+  color: #a0aec0; /* Files color */
+  margin-left: 20px;
+}
+
+.file-structure .indent-1 { margin-left: 20px; }
+.file-structure .indent-2 { margin-left: 40px; }
+.file-structure .indent-3 { margin-left: 60px; }
+
+/* =============================================
+   Footer
+   ============================================= */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  color: var(--gray);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+}

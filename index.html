@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textiles - Next.js Portfolio Template Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <h1>TEXTILES</h1>
+        <span>Next.js Portfolio Template</span>
+        <span class="badge">v2.0</span>
+      </div>
+
+      <div class="nav-links">
+        <h3>Getting Started</h3>
+        <ul>
+          <li class="active">
+            <a href="#introduction"><i class="fas fa-home"></i> Introduction</a>
+          </li>
+          <li>
+            <a href="#features"><i class="fas fa-star"></i> Features</a>
+          </li>
+          <li>
+            <a href="#demos"><i class="fas fa-desktop"></i> Demo Pages</a>
+          </li>
+          <li>
+            <a href="#requirements"
+              ><i class="fas fa-server"></i> Requirements</a
+            >
+          </li>
+          <li>
+            <a href="#installation"
+              ><i class="fas fa-download"></i> Installation</a
+            >
+          </li>
+          <li>
+            <a href="#structure"
+              ><i class="fas fa-folder"></i> Project Structure</a
+            >
+          </li>
+        </ul>
+
+        <h3>Customization</h3>
+        <ul>
+          <li>
+            <a href="#configuration"
+              ><i class="fas fa-cog"></i> Configuration</a
+            >
+          </li>
+          <li>
+            <a href="#styles"
+              ><i class="fas fa-palette"></i> Styling & Theming</a
+            >
+          </li>
+          <li>
+            <a href="#components"
+              ><i class="fas fa-puzzle-piece"></i> Components</a
+            >
+          </li>
+          <li>
+            <a href="#content"><i class="fas fa-edit"></i> Updating Content</a>
+          </li>
+        </ul>
+
+        <h3>Advanced</h3>
+        <ul>
+          <li>
+            <a href="#deployment"><i class="fas fa-rocket"></i> Deployment</a>
+          </li>
+          <li>
+            <a href="#seo"><i class="fas fa-search"></i> SEO Optimization</a>
+          </li>
+          <li>
+            <a href="#performance"
+              ><i class="fas fa-tachometer-alt"></i> Performance</a
+            >
+          </li>
+          <li>
+            <a href="#troubleshooting"
+              ><i class="fas fa-bug"></i> Troubleshooting</a
+            >
+          </li>
+        </ul>
+
+        <h3>Resources</h3>
+        <ul>
+          <li>
+            <a href="#support"><i class="fas fa-life-ring"></i> Support</a>
+          </li>
+          <li>
+            <a href="#changelog"><i class="fas fa-list"></i> Changelog</a>
+          </li>
+          <li>
+            <a href="#credits"><i class="fas fa-star"></i> Credits</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="header">
+        <div>
+          <h2>Textiles - Next.js Portfolio Template Documentation</h2>
+          <p>
+            Comprehensive guide for your textile business portfolio template
+          </p>
+        </div>
+        <div class="header-actions">
+          <a
+            href="https://github.com/rhshuvo44/textiles"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> GitHub Repo
+          </a>
+          <a
+            href="https://textiles.vercel.app/"
+            class="btn btn-secondary"
+            target="_blank"
+          >
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search documentation..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <!-- Introduction Section -->
+      <section id="introduction" class="section">
+        <h3><i class="fas fa-home"></i> Introduction</h3>
+        <p>
+          Thank you for choosing
+          <strong>Textiles - Next.js Portfolio Template</strong>. This
+          documentation will guide you through the setup, customization, and
+          deployment of your modern textile business portfolio website.
+        </p>
+
+        <img
+          src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=800"
+          alt="Textiles Template Preview"
+          class="screenshot"
+        />
+
+        <div class="toc">
+          <h4>In this documentation:</h4>
+          <ul>
+            <li><a href="#features">Key Features</a></li>
+            <li><a href="#demos">Demo Pages</a></li>
+            <li><a href="#requirements">System Requirements</a></li>
+            <li><a href="#installation">Installation Guide</a></li>
+            <li><a href="#customization">Customization Options</a></li>
+            <li><a href="#deployment">Deployment Process</a></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <p>
+            <strong>Template Overview:</strong> Textiles is a modern portfolio
+            template built with Next.js, Tailwind CSS, and TypeScript. It's
+            designed for textile businesses, fabric manufacturers, fashion
+            designers, and any business in the textile industry looking to
+            showcase their work online.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="section">
+        <h3><i class="fas fa-star"></i> Features</h3>
+        <p>
+          Textiles comes packed with features to help you showcase your textile
+          business:
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h4>Next.js 14</h4>
+            <p>
+              Built with the latest Next.js features including App Router and
+              React Server Components.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h4>Fully Responsive</h4>
+            <p>Perfectly adapts to all device sizes from mobile to desktop.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h4>Tailwind CSS</h4>
+            <p>
+              Customizable design system with Tailwind CSS and easy theming.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-moon"></i>
+            </div>
+            <h4>Dark Mode</h4>
+            <p>
+              Built-in dark/light mode toggle with system preference detection.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h4>SEO Optimized</h4>
+            <p>
+              Built-in SEO features and metadata management for better rankings.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h4>High Performance</h4>
+            <p>Optimized for fast loading times and smooth user experience.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h4>Smooth Animations</h4>
+            <p>
+              AOS (Animate On Scroll) library for engaging scroll animations.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h4>Clean Code</h4>
+            <p>Well-organized, commented codebase for easy customization.</p>
+          </div>
+        </div>
+
+        <h4>Technology Stack</h4>
+        <p>Textiles is built with modern web technologies:</p>
+        <div>
+          <span class="tech-badge">Next.js 14</span>
+          <span class="tech-badge">React 18</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">DaisyUI</span>
+          <span class="tech-badge">Vercel</span>
+          <span class="tech-badge">AOS Animations</span>
+          <span class="tech-badge">React Icons</span>
+        </div>
+      </section>
+
+      <!-- Demo Pages Section -->
+      <section id="demos" class="section">
+        <h3><i class="fas fa-desktop"></i> Demo Pages</h3>
+        <p>The template includes the following pre-designed pages:</p>
+
+        <div class="theme-preview">
+          <div class="theme-card">
+            <img
+              src="./assets/images/hero-light.png"
+              alt="Home Page"
+              style="object-fit: cover; background-position: top;"
+            />
+            <div class="theme-card-content">
+              <h4>Home Page</h4>
+              <p>
+                Modern landing page with hero section, features, and
+                call-to-action.
+              </p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <img
+              src="./assets/images/about.png"
+              alt="About Page"
+            />
+            <div class="theme-card-content">
+              <h4>About Page</h4>
+              <p>
+                Company overview, mission/vision, team members, and milestones.
+              </p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <img
+              src="./assets/images/mar.png"
+              alt="Merchandising Page"
+            />
+            <div class="theme-card-content">
+              <h4>Merchandising Page</h4>
+              <p>
+                Showcase your Merchandising with detailed descriptions and pricing.
+              </p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <img
+              src="assets/images/gallery.png"
+              alt="Gallery Page"
+            />
+            <div class="theme-card-content">
+              <h4>Gallery Page</h4>
+              <p>Grid layout to showcase your textile products and projects.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Requirements Section -->
+      <section id="requirements" class="section">
+        <h3><i class="fas fa-server"></i> Requirements</h3>
+        <p>
+          Before installing the theme, ensure your environment meets these
+          requirements:
+        </p>
+
+        <ul>
+          <li><strong>Node.js</strong> - v18 or higher</li>
+          <li><strong>npm</strong> - v9 or higher (or yarn v1.22+)</li>
+          <li><strong>Operating System</strong> - Windows, macOS, or Linux</li>
+          <li><strong>Git</strong> - For version control and deployment</li>
+        </ul>
+
+        <div class="note">
+          <p>
+            <strong>Recommended:</strong> Use the latest LTS version of Node.js
+            for best performance and compatibility.
+          </p>
+        </div>
+      </section>
+
+      <!-- Installation Section -->
+      <section id="installation" class="section">
+        <h3><i class="fas fa-download"></i> Installation</h3>
+        <p>Follow these steps to set up Textiles on your local machine:</p>
+
+        <h4>Step 1: Install Dependencies</h4>
+        <p>Navigate to the template directory and install required packages:</p>
+
+        <pre><code>cd textiles
+npm install
+# or
+yarn install</code></pre>
+        <h4>Step 2: Install Dependencies</h4>
+        <p>Install all required packages using npm or yarn:</p>
+
+        <pre><code>npm install
+# or
+yarn install</code></pre>
+        <h4>Step 3: Configure Environment Variables</h4>
+        <p>
+          Create a <code>.env.local</code> file in the root directory and add
+          your environment variables:
+        </p>
+
+        <pre><code># .env.local
+EMAIL_HOST="smtp.example.com"
+EMAIL_PORT=465
+EMAIL_SECURE=true
+EMAIL_USER=""
+EMAIL_PASS=""
+
+NEXT_PUBLIC_EMAILJS_CONTACT_FORM_SERVICE_ID=""
+NEXT_PUBLIC_EMAILJS_CONTACT_FORM_TEMPLATE_ID=template_k42cntw
+NEXT_PUBLIC_EMAILJS_CONTACT_FORM_PUBLIC_KEY=SCRr6WqN7Mb9ynDv7
+
+NEXT_PUBLIC_EMAILJS_REQUEST_A_QUOTE_SERVICE_ID=service_jqd85q9
+NEXT_PUBLIC_EMAILJS_REQUEST_A_QUOTE_TEMPLATE_ID=template_e3t90n8
+NEXT_PUBLIC_EMAILJS_REQUEST_A_QUOTE_PUBLIC_KEY=SCRr6WqN7Mb9ynDv7
+</code></pre>
+        <section id="email-configuration" class="section">
+          <h3><i class="fas fa-envelope"></i> Email Configuration</h3>
+          <p>
+            This template supports sending emails via SMTP or using EmailJS for
+            contact forms and request-a-quote forms.
+          </p>
+
+          <h4>1. SMTP Configuration</h4>
+          <p>
+            Set the following environment variables in your
+            <code>.env</code> file to configure your SMTP server:
+          </p>
+
+          <pre><code>EMAIL_HOST="smtp.example.com"
+EMAIL_PORT=465
+EMAIL_SECURE=true
+EMAIL_USER="your_email@example.com"
+EMAIL_PASS="your_email_password"</code></pre>
+
+          <div class="note">
+            <p>
+              <strong>Note:</strong> Make sure to keep your
+              <code>EMAIL_PASS</code> secure and do not commit it to version
+              control.
+            </p>
+          </div>
+
+          <h4>2. EmailJS Configuration</h4>
+          <p>
+            Set the following environment variables to use EmailJS for forms:
+          </p>
+
+          <pre><code>NEXT_PUBLIC_EMAILJS_CONTACT_FORM_SERVICE_ID="your_service_id"
+NEXT_PUBLIC_EMAILJS_CONTACT_FORM_TEMPLATE_ID="template_k42cntw"
+NEXT_PUBLIC_EMAILJS_CONTACT_FORM_PUBLIC_KEY="SCRr6WqN7Mb9ynDv7"
+
+NEXT_PUBLIC_EMAILJS_REQUEST_A_QUOTE_SERVICE_ID="service_jqd85q9"
+NEXT_PUBLIC_EMAILJS_REQUEST_A_QUOTE_TEMPLATE_ID="template_e3t90n8"
+NEXT_PUBLIC_EMAILJS_REQUEST_A_QUOTE_PUBLIC_KEY="SCRr6WqN7Mb9ynDv7"</code></pre>
+
+          <div class="note">
+            <p>
+              <strong>Note:</strong> Replace the IDs and keys with your own
+              EmailJS service, template, and public key values.
+            </p>
+          </div>
+
+          <h4>3. Using the Configuration</h4>
+          <ul>
+            <li>
+              For SMTP emails, the template uses <code>nodemailer</code> to send
+              emails from your server.
+            </li>
+            <li>
+              For EmailJS, the contact forms and request-a-quote forms use the
+              provided service and template IDs to send emails directly from the
+              frontend.
+            </li>
+            <li>
+              Ensure your environment variables are correctly set and accessible
+              by Next.js.
+            </li>
+          </ul>
+        </section>
+        <div class="warning">
+          <p>
+            <strong>Important:</strong> Do not commit your
+            <code>.env.local</code> file to version control as it may contain
+            sensitive information.
+          </p>
+        </div>
+
+        <h4>Step 3: Run the Development Server</h4>
+        <p>Start the development server with:</p>
+
+        <pre><code>npm run dev
+# or
+yarn dev</code></pre>
+
+        <p>
+          Your site will now be running at
+          <a href="http://localhost:3000" target="_blank"
+            >http://localhost:3000</a
+          >
+        </p>
+      </section>
+
+      <!-- Project Structure Section -->
+      <section id="structure" class="section">
+        <h3><i class="fas fa-folder"></i> Project Structure</h3>
+        <p>
+          Here's an overview of the main directories and files in the template:
+        </p>
+
+        <div class="file-structure">
+          <div class="folder">textiles/</div>
+          <div class="folder indent-1">
+            public/
+            <span class="comment"># Static assets (images, fonts, etc.)</span>
+          </div>
+          <div class="folder indent-1">src/</div>
+          <div class="folder indent-2">
+            app/ <span class="comment"># App router directory</span>
+          </div>
+          <div class="folder indent-3">
+            about/ <span class="comment"># About page components</span>
+          </div>
+          <div class="folder indent-3">
+            components/ <span class="comment"># Reusable components</span>
+          </div>
+          <div class="folder indent-3">
+            globals.css <span class="comment"># Global styles</span>
+          </div>
+          <div class="folder indent-3">
+            layout.tsx <span class="comment"># Root layout</span>
+          </div>
+          <div class="folder indent-3">
+            page.tsx <span class="comment"># Home page</span>
+          </div>
+          <div class="folder indent-2">
+            assets/ <span class="comment"># Images and other assets</span>
+          </div>
+          <div class="folder indent-2">
+            components/ <span class="comment"># Shared components</span>
+          </div>
+          <div class="folder indent-2">
+            db/ <span class="comment"># Data files</span>
+          </div>
+          <div class="file indent-2">
+            data.ts <span class="comment"># Sample data</span>
+          </div>
+          <div class="folder indent-1">
+            .eslintrc.json <span class="comment"># ESLint configuration</span>
+          </div>
+          <div class="folder indent-1">
+            .gitignore <span class="comment"># Git ignore rules</span>
+          </div>
+          <div class="folder indent-1">
+            next.config.js <span class="comment"># Next.js configuration</span>
+          </div>
+          <div class="folder indent-1">
+            package.json <span class="comment"># Project dependencies</span>
+          </div>
+          <div class="folder indent-1">
+            postcss.config.js
+            <span class="comment"># PostCSS configuration</span>
+          </div>
+          <div class="folder indent-1">
+            tailwind.config.js
+            <span class="comment"># Tailwind CSS configuration</span>
+          </div>
+          <div class="folder indent-1">
+            tsconfig.json
+            <span class="comment"># TypeScript configuration</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Configuration Section -->
+      <section id="configuration" class="section">
+        <h3><i class="fas fa-cog"></i> Configuration</h3>
+        <p>Customize the template to match your brand identity:</p>
+
+        <h4>1. Site Configuration</h4>
+        <p>
+          Edit the data files in <code>src/db/data.ts</code> to update your site
+          information:
+        </p>
+
+        <pre><code>// Example data structure
+export const navLinks = [
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  // ... other navigation links
+];
+
+export const teamMembers = [
+  {
+    name: "John Doe",
+    role: "Founder & CEO",
+    image: "/images/team/john-doe.jpg",
+    bio: "Experienced textile professional with over 15 years in the industry...",
+    social: {
+      linkedin: "https://linkedin.com/in/johndoe",
+      // ... other social links
+    }
+  },
+  // ... other team members
+];</code></pre>
+
+        <h4>2. Theme Configuration</h4>
+        <p>
+          Modify <code>tailwind.config.js</code> to customize colors and fonts:
+        </p>
+
+        <pre><code>// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#00A9E9',
+        secondary: '#EC4899',
+        // ... other custom colors
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          primary: "#00A9E9",
+          secondary: "#EC4899",
+        },
+        dark: {
+          primary: "#00A9E9",
+          secondary: "#EC4899",
+        },
+      },
+    ],
+  },
+};</code></pre>
+      </section>
+
+      <!-- Styling Section -->
+      <section id="styles" class="section">
+        <h3><i class="fas fa-palette"></i> Styling & Theming</h3>
+        <p>
+          Textiles uses Tailwind CSS with DaisyUI for styling. Here's how to
+          customize the appearance:
+        </p>
+
+        <h4>Color Scheme</h4>
+        <p>The template uses a primary and secondary color scheme:</p>
+
+        <div class="color-swatch">
+          <div class="color color-primary" title="Primary Color"></div>
+          <div class="color color-secondary" title="Secondary Color"></div>
+          <div class="color color-dark" title="Dark Color"></div>
+          <div class="color color-light" title="Light Color"></div>
+        </div>
+
+        <p>
+          To change the color scheme, update the
+          <code>tailwind.config.js</code> file as shown in the Configuration
+          section.
+        </p>
+
+        <h4>Custom CSS</h4>
+        <p>
+          For additional custom styles, you can add them to
+          <code>src/app/globals.css</code>:
+        </p>
+
+        <pre><code>/* Custom styles */
+@layer components {
+  .custom-button {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+  }
+  
+  .custom-card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300;
+  }
+}</code></pre>
+      </section>
+
+      <!-- Components Section -->
+      <section id="components" class="section">
+        <h3><i class="fas fa-puzzle-piece"></i> Components</h3>
+        <p>Textiles includes several reusable components:</p>
+
+        <h4>PolymorphicButton</h4>
+        <p>A flexible button component that can render as a button or link:</p>
+
+        <pre><code>import PolymorphicButton from "@/components/UI/PolymorphicButton";
+
+// Usage
+<PolymorphicButton
+  href="/about"
+  text="Learn More"
+  variant="solid"
+  ariaLabel="Learn more about our company"
+/></code></pre>
+
+        <h4>Navbar</h4>
+        <p>The responsive navigation bar with mobile menu:</p>
+
+        <pre><code>import Navbar from "@/components/UI/Navbar";
+
+// Usage in layout
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}</code></pre>
+
+        <h4>ThemeToggle</h4>
+        <p>Dark/light mode toggle component:</p>
+
+        <pre><code>import ThemeToggle from "@/components/UI/ThemeToggle";
+
+// Usage
+<ThemeToggle /></code></pre>
+      </section>
+
+      <!-- Content Section -->
+      <section id="content" class="section">
+        <h3><i class="fas fa-edit"></i> Updating Content</h3>
+        <p>To update the content of your website, follow these steps:</p>
+
+        <h4>1. Text Content</h4>
+        <p>
+          Most text content is stored in <code>src/db/data.ts</code>. Edit the
+          exported arrays and objects to change:
+        </p>
+        <ul>
+          <li>Navigation links</li>
+          <li>Hero section content</li>
+          <li>About page content</li>
+          <li>Team member information</li>
+          <li>Services offered</li>
+          <li>Testimonials</li>
+        </ul>
+
+        <h4>2. Images</h4>
+        <p>
+          Replace the images in the <code>public/images/</code> directory with
+          your own. Maintain the same folder structure and file names, or update
+          the references in the data files.
+        </p>
+
+        <h4>3. Pages</h4>
+        <p>
+          To create new pages, add a new directory in <code>src/app/</code> with
+          a <code>page.tsx</code> file. For example:
+        </p>
+
+        <pre><code>// src/app/services/page.tsx
+export default function ServicesPage() {
+  return (
+    <div>
+      <h1>Our Services</h1>
+      {/* Page content */}
+    </div>
+  );
+}</code></pre>
+      </section>
+
+      <!-- Deployment Section -->
+      <section id="deployment" class="section">
+        <h3><i class="fas fa-rocket"></i> Deployment</h3>
+        <p>Deploy your Textiles portfolio to Vercel with these simple steps:</p>
+
+        <h4>Step 1: Create a Vercel Account</h4>
+        <p>
+          If you don't have one, sign up at
+          <a href="https://vercel.com" target="_blank">vercel.com</a>.
+        </p>
+
+        <h4>Step 2: Import Your Project</h4>
+        <p>Connect your GitHub repository to Vercel:</p>
+        <ol>
+          <li>Go to your Vercel dashboard</li>
+          <li>Click "Add New Project"</li>
+          <li>Select your Textiles repository</li>
+          <li>Click "Import"</li>
+        </ol>
+
+        <h4>Step 3: Configure Build Settings</h4>
+        <p>
+          Vercel will automatically detect Next.js and configure the build
+          settings. You don't need to change anything.
+        </p>
+
+        <h4>Step 4: Deploy</h4>
+        <p>
+          Click "Deploy" and Vercel will automatically build and deploy your
+          application.
+        </p>
+
+        <div class="note">
+          <p>
+            <strong>Note:</strong> Vercel provides a free tier that's perfect
+            for portfolio websites.
+          </p>
+        </div>
+
+        <h4>Other Deployment Options</h4>
+        <p>You can also deploy to other platforms:</p>
+
+        <h5>Netlify</h5>
+        <pre><code># Build command
+npm run build
+
+# Publish directory
+.out</code></pre>
+
+        <h5>GitHub Pages</h5>
+        <pre><code># Install gh-pages package
+npm install --save-dev gh-pages
+
+# Add to package.json
+"scripts": {
+  "build": "next build && next export",
+  "deploy": "gh-pages -d out"
+}</code></pre>
+      </section>
+
+      <!-- SEO Section -->
+      <section id="seo" class="section">
+        <h3><i class="fas fa-search"></i> SEO Optimization</h3>
+        <p>Textiles includes several SEO features out of the box:</p>
+
+        <h4>Meta Tags</h4>
+        <p>Update the metadata in <code>src/app/layout.tsx</code>:</p>
+
+        <pre><code>export const metadata: Metadata = {
+  title: "Your Textile Business Name",
+  description: "Description of your textile business",
+  keywords: ["textiles", "fabric", "your", "keywords"],
+  authors: [{ name: "Your Name" }],
+  openGraph: {
+    title: "Your Textile Business Name",
+    description: "Description of your textile business",
+    url: "https://yourwebsite.com",
+    siteName: "Your Textile Business Name",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Your Textile Business Name",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Your Textile Business Name",
+    description: "Description of your textile business",
+    images: ["/og-image.png"],
+  },
+};</code></pre>
+
+        <h4>JSON-LD Structured Data</h4>
+        <p>
+          The template includes JSON-LD structured data for better search engine
+          understanding:
+        </p>
+
+        <pre><code>const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Your Textile Business Name",
+  url: "https://yourwebsite.com",
+  logo: "https://yourwebsite.com/logo.png",
+  sameAs: [
+    "https://www.facebook.com/yourpage",
+    "https://www.instagram.com/yourpage",
+    // ... other social media
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-123-456-7890",
+    contactType: "Customer Service",
+    email: "info@yourwebsite.com",
+  },
+  description: "Description of your textile business",
+};</code></pre>
+
+        <h4>Image Optimization</h4>
+        <p>
+          Next.js automatically optimizes images with the next/image component.
+          Always include alt text for accessibility and SEO:
+        </p>
+
+        <pre><code>import Image from "next/image";
+
+<Image
+  src="./assets/images/hero-light.png"
+  alt="Description of your hero image"
+  fill
+style="object-fit: cover;  width: 100%;"
+/></code></pre>
+      </section>
+
+      <!-- Performance Section -->
+      <section id="performance" class="section">
+        <h3><i class="fas fa-tachometer-alt"></i> Performance Optimization</h3>
+        <p>Textiles is optimized for performance with these techniques:</p>
+
+        <h4>Next.js Optimization</h4>
+        <ul>
+          <li>Automatic code splitting</li>
+          <li>Image optimization with next/image</li>
+          <li>Server-side rendering and static generation</li>
+          <li>Font optimization</li>
+        </ul>
+
+        <h4>Bundle Analysis</h4>
+        <p>Analyze your bundle size to identify optimization opportunities:</p>
+
+        <pre><code># Install @next/bundle-analyzer
+npm install @next/bundle-analyzer
+
+# Update next.config.js
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+module.exports = withBundleAnalyzer({
+  // your Next.js config
+});
+
+# Run the analysis
+ANALYZE=true npm run build</code></pre>
+
+        <h4>Lazy Loading</h4>
+        <p>Components and libraries are lazy-loaded when possible:</p>
+
+        <pre><code>import dynamic from 'next/dynamic';
+
+const DynamicComponent = dynamic(() => import('../components/DynamicComponent'), {
+  loading: () => <p>Loading...</p>,
+});</code></pre>
+      </section>
+
+      <!-- Support Section -->
+      <section id="support" class="section">
+        <h3><i class="fas fa-life-ring"></i> Support</h3>
+        <p>We're here to help you with any questions or issues:</p>
+
+        <div class="info-card">
+          <p>
+            <strong>Documentation:</strong> First, please refer to this
+            documentation as it covers most common questions.
+          </p>
+
+          <p>
+            <strong>Email Support:</strong> For ThemeForest buyers, contact us
+            at rhshuvo121@gmail.com
+          </p>
+        </div>
+
+        <h4>Changelog</h4>
+        <p><strong>Version 2.0 (Current)</strong></p>
+        <ul>
+          <li>Upgraded to Next.js 14</li>
+          <li>Added dark mode support</li>
+          <li>Improved mobile navigation</li>
+          <li>Added new portfolio components</li>
+          <li>Fixed responsive design issues</li>
+        </ul>
+
+        <p><strong>Version 1.1</strong></p>
+        <ul>
+          <li>Initial public release</li>
+          <li>Core portfolio functionality</li>
+          <li>Responsive design implementation</li>
+        </ul>
+      </section>
+
+      <!-- Credits Section -->
+      <section id="credits" class="section">
+        <h3><i class="fas fa-star"></i> Credits</h3>
+        <p>Textiles makes use of these third-party resources:</p>
+
+        <ul>
+          <li>
+            <a href="https://nextjs.org/" target="_blank">Next.js</a> - React
+            framework
+          </li>
+          <li>
+            <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
+            - Utility-first CSS framework
+          </li>
+          <li>
+            <a href="https://daisyui.com/" target="_blank">DaisyUI</a> -
+            Tailwind CSS components
+          </li>
+          <li>
+            <a href="https://react-icons.github.io/react-icons/" target="_blank"
+              >React Icons</a
+            >
+            - Icon library
+          </li>
+          <li>
+            <a href="https://michalsnik.github.io/aos/" target="_blank">AOS</a>
+            - Animate On Scroll library
+          </li>
+          <li>
+            <a href="https://unsplash.com/" target="_blank">Unsplash</a> - Stock
+            photos (replace with your own)
+          </li>
+        </ul>
+
+        <div class="note">
+          <p>
+            <strong>Important:</strong> Make sure to replace all Unsplash images
+            with your own licensed images before publishing your website.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>
+          Textiles Next.js Portfolio Template Documentation &copy; 2025 |
+          Created by Ripon Hossain Shuvo
+        </p>
+        <p>
+          For ThemeForest support, please contact us at rhshuvo121@gmail.com
+        </p>
+      </div>
+    </main>
+    <!-- custom js  -->
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+/* =============================================
+   Tablet & Small Desktops
+   Screens up to 992px (Bootstrap md breakpoint)
+   ============================================= */
+@media (max-width: 992px) {
+  /* Sidebar: hide by default, can slide in when active */
+  .sidebar {
+    transform: translateX(-100%);
+    width: clamp(200px, 20vw, 280px); /* dynamic width based on viewport */
+  }
+
+  /* Sidebar visible when active */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Content: full width with padding */
+  .content {
+    margin-left: 0; /* remove sidebar offset */
+    padding: 30px; /* reduce padding for smaller screens */
+  }
+
+  /* Mobile menu toggle button */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Header layout: stack vertically */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Header actions: wrap and align left */
+  .header-actions {
+    margin-top: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+/* =============================================
+   Mobile
+   Screens up to 768px (Bootstrap sm breakpoint)
+   ============================================= */
+@media (max-width: 768px) {
+  /* Sidebar: hide completely by default, show when active */
+  .sidebar {
+    left: -100%; /* hide sidebar off-screen */
+    width: 70vw; /* mobile-friendly width */
+  }
+
+  .sidebar.active {
+    left: 0; /* slide in sidebar */
+  }
+
+  /* Content: full width with smaller padding */
+  .content {
+    margin-left: 0; /* no sidebar offset */
+    padding: 20px;
+  }
+}
+
+/* =============================================
+   Small Mobile
+   Screens up to 576px (Bootstrap xs breakpoint)
+   ============================================= */
+@media (max-width: 576px) {
+  /* Content padding: reduce further */
+  .content {
+    padding: 15px;
+  }
+
+  /* Header title: smaller font */
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Center buttons in header and reduce gap */
+  .header-actions {
+    justify-content: center; /* center buttons horizontally */
+    gap: 10px; /* smaller spacing between buttons */
+  }
+
+  /* Buttons: smaller padding and font size */
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
